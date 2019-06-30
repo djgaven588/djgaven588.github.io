@@ -1,5 +1,7 @@
 function onRegisterSubmit(){
     //After the user has submitted the registration form, register a new Simple User:
+    Playerio.useSecureApiRequests = true;
+    Playerio.useSecureConnections = true;
     PlayerIO.authenticate(
         "the-robocraft-project-749pkx2pbeablz84ua3hkg",
         "public",                                   //A connection with the authentication type SimpleUsers
@@ -7,9 +9,7 @@ function onRegisterSubmit(){
             register: "true",
             username: document.getElementById("user").value,
             password: document.getElementById("pass").value,
-            email: document.getElementById("email").value,
-            useSecureApiRequests: true,
-            useSecureConnections: true
+            email: document.getElementById("email").value
         },
         {},
         function (client) {
