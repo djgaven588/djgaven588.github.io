@@ -7,7 +7,8 @@ function onRegisterSubmit(){
             register: "true",
             username: document.getElementById("user").value,
             password: document.getElementById("pass").value,
-            email: document.getElementById("email").value
+            email: document.getElementById("email").value,
+            useSecureApiRequests: true
         },
         {},
         function (client) {
