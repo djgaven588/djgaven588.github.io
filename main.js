@@ -2,7 +2,7 @@ function onRegisterSubmit(){
     //After the user has submitted the registration form, register a new Simple User:
     PlayerIO.useSecureApiRequests = true;
     PlayerIO.useSecureConnections = true;
-    let regex = /^[A-Z]|[a-z]|[0-9]|-|_|\.)+/
+    let regex = /^([A-Z]|[a-z]|[0-9]|-|_|\.)+/
     let username = document.getElementById("user").value;
     let password = document.getElementById("pass").value;
 
